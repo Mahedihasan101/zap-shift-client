@@ -8,7 +8,11 @@ import { Carousel } from 'react-responsive-carousel';
 const Banner = () => {
     return (
        
-            <Carousel autoPlay={true}>
+            <Carousel 
+            autoPlay={true}
+            autoplaySpeed={1000}
+            infinite={true}
+            infiniteLoop={true}>
                 <div>
                     <Banner1></Banner1>
                 </div>
@@ -20,7 +24,10 @@ const Banner = () => {
                 </div>
                 
                 
+                
             </Carousel>
+ 
+            
             
 
         
