@@ -12,7 +12,8 @@ const Banner = () => {
             autoPlay={true}
             autoplaySpeed={1000}
             infinite={true}
-            infiniteLoop={true}>
+            infiniteLoop={true}
+            showThumbs={false}>
                 <div>
                     <Banner1></Banner1>
                 </div>

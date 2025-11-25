@@ -17,7 +17,7 @@ const Brands = () => {
        <div className='mb-24'>
         <h1 className='font-extrabold text-3xl text-secondary text-center mt-24 mb-10'>We've helped thousands of sales teams</h1>
          <Swiper
-            slidesPerView={4}
+            slidesPerView={3}
             centeredSlides={true}
             spaceBetween={30}
             grabCursor={true}

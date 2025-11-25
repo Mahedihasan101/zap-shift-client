@@ -5,6 +5,11 @@ import OurServices from '../../../Component/OurServices/OurServices';
 import Brands from '../Brands/Brands';
 import ExtraBanner from '../ExtraBanner/ExtraBanner';
 import FirstPriority from '../FristPriority/FirstPriority';
+import Reviews from '../Reviews/Reviews';
+
+
+const reviewsPromise = fetch('/public/reviews.json')
+.then(res => res.json())
 
 
 const Home = () => {
@@ -16,6 +21,7 @@ const Home = () => {
                <Brands></Brands>
                <ExtraBanner></ExtraBanner>
                <FirstPriority></FirstPriority>
+               <Reviews reviewsPromise={reviewsPromise}></Reviews>
                
         </div>
     );
