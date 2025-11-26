@@ -6,6 +6,7 @@ import Brands from '../Brands/Brands';
 import ExtraBanner from '../ExtraBanner/ExtraBanner';
 import FirstPriority from '../FristPriority/FirstPriority';
 import Reviews from '../Reviews/Reviews';
+import AskedQuestion from '../AskedQuestion/AskedQuestion';
 
 
 const reviewsPromise = fetch('/public/reviews.json')
@@ -22,6 +23,7 @@ const Home = () => {
                <ExtraBanner></ExtraBanner>
                <FirstPriority></FirstPriority>
                <Reviews reviewsPromise={reviewsPromise}></Reviews>
+               <AskedQuestion></AskedQuestion>
                
         </div>
     );

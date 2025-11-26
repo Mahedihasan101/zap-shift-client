@@ -6,7 +6,7 @@ import { AiOutlineArrowUp } from 'react-icons/ai';
 const Navbar = () => {
     const links = <>
         <li><NavLink>Services</NavLink></li>
-        <li><NavLink>Services</NavLink></li>
+        <li><NavLink to='coverage'>Coverage</NavLink></li>
         <li><NavLink>Services</NavLink></li>
         <li><NavLink>Services</NavLink></li>
 
