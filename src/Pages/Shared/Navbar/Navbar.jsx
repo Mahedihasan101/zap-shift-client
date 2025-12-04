@@ -1,9 +1,22 @@
 import React from 'react';
 import Logo from '../../../Component/Logo/Logo';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import useAuth from '../../../hooks/useAuth';
 
 const Navbar = () => {
+    const {user,logOut}=useAuth();
+
+    const handleLogOut =()=>{
+        logOut()
+        .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     const links = <>
         <li><NavLink>Services</NavLink></li>
         <li><NavLink to='coverage'>Coverage</NavLink></li>
@@ -34,8 +47,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className='flex item-center gap-4'>
-                    <a className="btn rounded-xl font-bold">Sign In</a>
-                    <a className="btn btn-primary text-black rounded-xl font-bold">Sign Up </a>
+                    {
+                        user ? <a onClick={handleLogOut} className="btn rounded-xl font-bold">LogOut</a>:<a className="btn rounded-xl font-bold"> <Link to='login'>Sign In</Link></a>
+                        
+                    }
+                    <a className="btn btn-primary text-black rounded-xl font-bold">Be a rider</a>
                     <div className='bg-black w-10 rounded-full -ml-4 '><AiOutlineArrowUp className='text-[#caeb66] w-10 text-3xl mt-1 rotate-2' style={{ transform: "rotate(40deg)" }}/></div>
                 </div>
             </div>
